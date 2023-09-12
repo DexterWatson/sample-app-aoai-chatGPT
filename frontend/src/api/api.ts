@@ -266,6 +266,7 @@ export const historyEnsure = async (): Promise<CosmosDBHealth> => {
     .then(async res => {
         let respJson = await res.json();
         let formattedResponse;
+        console.log(respJson);
         if(respJson.message){
             formattedResponse = CosmosDBStatus.Working
         }else{
